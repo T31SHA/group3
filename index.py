@@ -40,5 +40,5 @@ item_net_revenue = {
     for item in unique_items
 }
 
-print(item_net_revenue)
+print( item_net_revenue )
 
