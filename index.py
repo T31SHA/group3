@@ -31,3 +31,14 @@ unique_items = list({sale["item"] for sale in sales})
 print(unique_items)
 
 
+#2
+item_net_revenue = {
+    item: sum(
+        (s["price"] * s["quantity"]) * (1 - s["discount"])
+        for s in sales if s["item"] == item
+    )
+    for item in unique_items
+}
+
+print( item_net_revenue )
+
