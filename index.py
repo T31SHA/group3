@@ -42,3 +42,7 @@ item_net_revenue = {
 
 print( item_net_revenue )
 
+#3
+top_items = [item for item, revenue in item_net_revenue.items() if revenue > 2000]
+print(top_items)
+
