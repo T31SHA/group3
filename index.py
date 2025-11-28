@@ -56,3 +56,7 @@ for sale in filtered_sales:
     branch = sale['branch']
     branch_quantities[branch] = branch_quantities.get(branch, 0) + sale['quantity']
 print(branch_quantities)
+
+#6
+most_successful_branch = max(branch_quantities, key=branch_quantities.get)
+print(most_successful_branch)
