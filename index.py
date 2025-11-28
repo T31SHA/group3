@@ -46,5 +46,13 @@ print( item_net_revenue )
 top_items = [item for item, revenue in item_net_revenue.items() if revenue > 2000]
 print(top_items)
 
+#4
 filtered_sales = [s for s in sales if s["item"] in top_items]
 print(filtered_sales)
+
+#5# Part 5 - Compute Total Quantity Sold per Branch
+branch_quantities = {}
+for sale in filtered_sales:
+    branch = sale['branch']
+    branch_quantities[branch] = branch_quantities.get(branch, 0) + sale['quantity']
+print(branch_quantities)
