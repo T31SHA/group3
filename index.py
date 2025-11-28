@@ -46,3 +46,5 @@ print( item_net_revenue )
 top_items = [item for item, revenue in item_net_revenue.items() if revenue > 2000]
 print(top_items)
 
+filtered_sales = [s for s in sales if s["item"] in top_items]
+print(filtered_sales)
